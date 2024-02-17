@@ -3,3 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background-color: #1f1f1f;
+    scroll-behavior: smooth;
+}
+
+.errorMsg{
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+}
+input:focus-visible, textarea:focus-visible{
+    outline: 1px solid green;
+}
+
+input:invalid[focused="true"], textarea:invalid[focused="true"]{
+    border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ p, textarea:invalid[focused="true"] ~ p{
+    display: block;
+}
